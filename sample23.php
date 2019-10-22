@@ -17,12 +17,18 @@
 
 <main>
 <h2>Practice</h2>
-<pre>
-    <?php 
-    $week = array('金','土','日','月','火','水','木');
-    print($week[0]);
-    ?>
-</pre>
+<table>
+    <?php for($i=1; $i<=10; $i++){
+        if($i%2){
+            print('<tr style="background-color: #ccc">');
+        }else{
+           print('<tr>');
+        }
+        print('<td>'.$i.'行目</td>');
+        print('</tr>');
+    }
+?>
+</table>
 </main>
 </body>    
 </html> 
