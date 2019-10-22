@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 <title>PHP</title>
 </head>
@@ -18,12 +18,11 @@
 <main>
 <h2>Practice</h2>
 <pre>
-    <?php>
-    foreach($_POST['reserve'] as $reserve){
-        print(htmlspecialchars($reserve, ENT_QUOTES) . ' ';)
-    }
+    <?php 
+    $week = array('金','土','日','月','火','水','木');
+    print($week[0]);
     ?>
-</pre> 
+</pre>
 </main>
 </body>    
-</html>
+</html> 

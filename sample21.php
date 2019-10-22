@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 <title>PHP</title>
 </head>
@@ -18,12 +18,17 @@
 <main>
 <h2>Practice</h2>
 <pre>
-    <?php>
-    foreach($_POST['reserve'] as $reserve){
-        print(htmlspecialchars($reserve, ENT_QUOTES) . ' ';)
+    <?php 
+    $zip = "１２３−４５６７";
+    
+    $zip = mb_convert_kana($zip, 'a', 'UTF-8');
+    if(preg_match("/\A\d{3}[-]\d{4}\z/",$zip)){
+        print('郵便番号：〒'.$zip);
+    }else{
+        print("※郵便番号を123-4567の形式でご記入ください");
     }
     ?>
-</pre> 
+</pre>
 </main>
 </body>    
-</html>
+</html> 

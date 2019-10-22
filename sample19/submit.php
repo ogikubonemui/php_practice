@@ -18,9 +18,9 @@
 <main>
 <h2>Practice</h2>
 <pre>
-    <?php>
+    <?php
     foreach($_POST['reserve'] as $reserve){
-        print(htmlspecialchars($reserve, ENT_QUOTES) . ' ';)
+        print(htmlspecialchars($reserve, ENT_QUOTES) . ' ');
     }
     ?>
 </pre> 
